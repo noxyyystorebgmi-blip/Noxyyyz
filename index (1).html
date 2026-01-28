@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+      <h1 class="title">Hello World!</h1>
+      <p id="currentTime"></p>
+      <script src="script.js"></script>
+  </body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOXYYY STORE – BGMI UC & Gaming Packs</title>
+  <style>
+    * { box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }
+    body { margin: 0; background: #0b0b0f; color: #fff; }
+    header { padding: 20px; text-align: center; background: linear-gradient(135deg,#1a1a2e,#16213e); }
+    header h1 { margin: 0; letter-spacing: 2px; }
+    header p { color: #bdbdbd; margin-top: 8px; }
+    .container { padding: 20px; max-width: 1100px; margin: auto; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 16px; }
+    .card { background: #141421; border-radius: 14px; padding: 16px; box-shadow: 0 10px 25px rgba(0,0,0,.4); }
+    .card h3 { margin-top: 0; }
+    .price { font-size: 22px; color: #00ffcc; font-weight: bold; }
+    .btn { display: inline-block; margin-top: 10px; padding: 10px 14px; border-radius: 10px; background: #00ffcc; color: #000; text-decoration: none; font-weight: bold; cursor: pointer; }
+    .btn.secondary { background: #ffffff; }
+    .section-title { margin: 30px 0 10px; letter-spacing: 1px; }
+    form { background:#141421; padding:16px; border-radius:14px; }
+    label { display:block; margin-top:10px; font-size:14px; color:#cfcfcf; }
+    input, select { width:100%; padding:10px; margin-top:6px; border-radius:8px; border:none; outline:none; }
+    footer { text-align:center; padding:20px; color:#9e9e9e; }
+    .note { font-size: 12px; color:#9e9e9e; margin-top:8px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>NOXYYY STORE</h1>
+  <p>BGMI UC • Gun Skins • Outfits • Fast & Trusted</p>
+</header>
+
+<div class="container">
+
+  <h2 class="section-title">🔥 BGMI UC PACKS</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>60 UC</h3>
+      <div class="price">₹90</div>
+      <a class="btn" href="#order">Buy Now</a>
+    </div>
+    <div class="card">
+      <h3>325 UC</h3>
+      <div class="price">₹420</div>
+      <a class="btn" href="#order">Buy Now</a>
+    </div>
+    <div class="card">
+      <h3>660 UC</h3>
+      <div class="price">₹820</div>
+      <a class="btn" href="#order">Buy Now</a>
+    </div>
+  </div>
+
+  <h2 class="section-title">🎯 Gun Skins & Outfits</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Premium Gun Skin</h3>
+      <div class="price">₹299+</div>
+      <a class="btn" href="#order">Order</a>
+    </div>
+    <div class="card">
+      <h3>Rare Outfit</h3>
+      <div class="price">₹499+</div>
+      <a class="btn" href="#order">Order</a>
+    </div>
+  </div>
+
+  <h2 id="order" class="section-title">📝 Place Your Order</h2>
+  <form onsubmit="sendWhatsApp(); return false;">
+    <label>BGMI UID</label>
+    <input id="uid" placeholder="Enter BGMI UID" required />
+
+    <label>Select Product</label>
+    <select id="product">
+      <option>60 UC</option>
+      <option>325 UC</option>
+      <option>660 UC</option>
+      <option>Gun Skin</option>
+      <option>Outfit</option>
+    </select>
+
+    <label>Instagram ID</label>
+    <input id="phone" placeholder="Enter Instagram ID (without @)" required />
+
+    <button class="btn secondary" type="submit">Send Order on WhatsApp</button>
+    <div class="note">Payment via UPI • Manual Verification</div>
+  </form>
+
+</div>
+
+<footer>
+  © 2026 NOXYYY STORE • Contact on WhatsApp
+</footer>
+
+<script>
+  function sendWhatsApp(){
+    var uid = document.getElementById('uid').value;
+    var product = document.getElementById('product').value;
+    var phone = document.getElementById('phone').value;
+
+    var msg = `Hello NOXYYY STORE%0A%0ABGMI UID: ${uid}%0AProduct: ${product}%0AInstagram ID: ${phone}`;
+    window.open('https://instagram.com/noxyyy_store', '_blank');
+  }
+</script>
+
+</body>
+</html>
